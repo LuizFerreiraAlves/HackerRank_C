@@ -6,7 +6,6 @@
 
 int main() 
 {
-
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
     char ch, s[MAX_LEN], sen[MAX_LEN];
     scanf("%c", &ch);
@@ -15,7 +14,6 @@ int main()
     scanf("%[^\n]%*c", sen);
 
     printf("%c\n%s\n%s\n", ch, s, sen);
-
 
     return 0;
 }
