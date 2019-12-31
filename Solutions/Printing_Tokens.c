@@ -32,11 +32,15 @@ int main() {
                 i++;
             }
         }
-    /*for (int i=0; i<n; i++){
+    
+    /* Also a solution.
+    
+    for (int i=0; i<n; i++){
         if(s[i] != ' '){
             printf("%s", &s[i]);
         }
         else printf("\n");
+        
     }*/
     return 0;
 }
