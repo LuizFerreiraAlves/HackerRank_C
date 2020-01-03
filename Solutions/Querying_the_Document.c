@@ -24,9 +24,10 @@ char** text_to_array(char* text, char split){
 
     // Inserting the tokens into an array
    while( token != NULL ) {
+       // One space for NULL terminator
+        result = realloc(result, (aux + 2)*sizeof(char*));
+        result[aux] = token;
         aux++;
-        result = realloc(result, (aux + 1)*sizeof(char*));
-        result[aux - 1] = token;
         token = strtok(NULL, &split);
    }
    
