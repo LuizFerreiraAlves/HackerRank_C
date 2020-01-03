@@ -53,18 +53,18 @@ char**** get_document(char* text) {
         n_sentences = size_of_array(sentence);
         doc[i] = malloc(n_sentences*sizeof(char**));
 
-            for(int j = 0; j < n_sentences; ++j){
-                // This code snippet below also works
-                // doc[i][j] = text_to_array(sentence[j], ' ');
-                
-                char** word = text_to_array(sentence[j], ' ');
-                n_words = size_of_array(word);
-                doc[i][j] = malloc(n_words*sizeof(char*));
+        for(int j = 0; j < n_sentences; ++j){
+            // This code snippet below also works
+            // doc[i][j] = text_to_array(sentence[j], ' ');
 
-                for(int k = 0; k < n_words; ++k){
-                    doc[i][j][k] = word[k];
-                } 
-            }
+            char** word = text_to_array(sentence[j], ' ');
+            n_words = size_of_array(word);
+            doc[i][j] = malloc(n_words*sizeof(char*));
+
+            for(int k = 0; k < n_words; ++k){
+                doc[i][j][k] = word[k];
+            } 
+        }
     }
 
     return doc;
