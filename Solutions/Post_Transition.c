@@ -77,6 +77,10 @@ void send_all_acceptable_packages(town* source, int source_office_index, town* t
                 //Modifying the number of packages of the target and the source offices
                 target->offices[target_office_index].packages_count++;
                 source->offices[source_office_index].packages_count--;
+		
+		//The package package_id actually is (package_id + 1) now because it was deleted from the source
+		//Package (package_id + 1) receives (package_id + 2), (package_id + 2) receives (package_id + 3)...
+		//So we need to check once again the package package_id so we decrement it here since it is added +1 in the for statement
                 package_id--;
            }
     }	
